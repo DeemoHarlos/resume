@@ -1,0 +1,106 @@
+body {
+	background-color: #CCCCCC;
+}
+
+a {
+	text-decoration: none;
+	color:#55A;
+}
+
+a:hover {
+	color:#88C;
+}
+
+#bodywrap {
+	background-color: #CCCCCC;
+	padding: 10px 2.5vw;
+}
+
+.section {
+	max-width: 960px;
+	width: 95vw;
+	margin: 10px;
+	border-radius: 6px;
+	background-color: #EEEEEE;
+	box-shadow: #000000 2px 2px 2px;
+	position: relative;
+}
+
+.title {
+	background-color: #666666;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 8px 20px;
+	font-size: 1.5em;
+}
+
+#headpic {
+	background-image: url('headpic.jpg');
+	background-size: cover;
+	background-position: center;
+	background-color: #AAAAAA;
+	background-repeat: no-repeat;
+	border-bottom-left-radius: 6px;
+	flex: 3 0 150px;
+}
+
+#profile table {
+	padding: 8px;
+	flex: 1 1 auto;
+}
+
+.attr {
+	text-align: center;
+	padding: 0 5px;
+}
+
+.value {
+	padding-left: 10px;
+}
+
+#profile table .lbr {
+	width: 3px;
+	border: solid #993 .5px;
+	border-right: none;
+	content: "";
+}
+
+#profile table .rbr {
+	width: 3px;
+	border: solid #993 .5px;
+	border-left: none;
+	content: "";
+}
+
+#profile table {
+	border-spacing: 0px 10px;
+}
+
+#profile table td {
+	margin: 3px 0;
+}
+
+#contact td {
+	padding-top: 10px;
+	border-bottom: solid #662 .5px;
+}
+
+#profile table tr:not(#contact) {
+	-webkit-transition: all 80ms;
+	   -moz-transition: all 80ms;
+		-ms-transition: all 80ms;
+		 -o-transition: all 80ms;
+			transition: all 80ms;
+}
+
+#profile table tr:not(#contact):hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+#works .content>a {
+	display: block;
+	flex: 1 0 0;
+	height: 200px;
+}

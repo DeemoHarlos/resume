@@ -17,7 +17,8 @@ br.hide{
 
 body {
 	margin: 0;
-	font-size: 1vw;
+	font-size: 12pt;
+	font-family: Consolas, sans-serif;
 /*	user-select: none;*/
 }
 
