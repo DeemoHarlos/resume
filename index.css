@@ -60,14 +60,14 @@ a:hover {
 	padding-left: 10px;
 }
 
-#profile table .lbr {
+#profile .lbr {
 	width: 3px;
 	border: solid #993 .5px;
 	border-right: none;
 	content: "";
 }
 
-#profile table .rbr {
+#profile .rbr {
 	width: 3px;
 	border: solid #993 .5px;
 	border-left: none;
@@ -78,29 +78,221 @@ a:hover {
 	border-spacing: 0px 10px;
 }
 
-#profile table td {
+#profile td {
 	margin: 3px 0;
 }
 
-#contact td {
+#profile .subsection td {
 	padding-top: 10px;
 	border-bottom: solid #662 .5px;
 }
 
-#profile table tr:not(#contact) {
-	-webkit-transition: all 80ms;
-	   -moz-transition: all 80ms;
-		-ms-transition: all 80ms;
-		 -o-transition: all 80ms;
-			transition: all 80ms;
-}
-
-#profile table tr:not(#contact):hover {
+#profile tr:not(#contact):hover {
 	background-color: rgba(0,0,0,0.1);
 }
 
 #works .content>a {
-	display: block;
 	flex: 1 0 0;
 	height: 200px;
+	text-align: center;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#works .content>a:nth-child(1) {
+	background-image: url(01.png);
+	background-position: center;
+}
+
+#works .content>a:nth-child(2) {
+	background-image: url(02.png);
+	background-position: center;
+}
+
+#works .content>a:nth-child(3) {
+	background-image: url(03.png);
+	background-position: center;
+}
+
+#works .content>a:nth-child(4) {
+	background-image: url(04.png);
+	background-position: top center;
+}
+
+#works .content>a:nth-child(5) {
+	background-image: url(05.png);
+	background-position: top center;
+}
+
+#works .content>a>.description {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-color: rgba(0,0,0,.7);
+	color: #FFF;
+}
+
+#works .content>a:nth-child(1),
+#works .content>a:nth-child(1)>.description {
+	border-bottom-left-radius: 6px;
+}
+
+#works .content>a:nth-last-child(1),
+#works .content>a:nth-last-child(1)>.description {
+	border-bottom-right-radius: 6px;
+}
+
+#works .content>a>.description:hover {
+	opacity: 1;
+}
+
+#experience .content {
+	padding-bottom: 10px;
+}
+
+#experience .subtitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	margin: .5em 0;
+}
+
+#experience .content>div {
+	flex: 1 0 0;
+}
+
+#workexp,
+#community {
+	text-align: center;
+	border-spacing: 0px 5px;
+}
+
+#workexp   th,
+#community th {
+	border-bottom: solid #662 .5px;
+}
+
+#workexp   tr:not(:first-child):hover,
+#community tr:not(:first-child):hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+#workexp   th:nth-child(2),
+#community th:nth-child(2),
+#workexp   td:nth-child(2),
+#community td:nth-child(2) {
+	padding: 0 10px; 
+}
+
+#skill{
+	border-spacing: 0px 10px;
+}
+
+#skill td {
+	margin: 3px 0;
+}
+
+#skill th {
+	border-bottom: solid #662 .5px;
+}
+
+#skill th:last-child:before {
+	position: absolute;
+	left: 10px;
+	padding-right: 10px;
+	padding-left: 5px;
+	content: "熟悉度";
+	background-color: rgba(0,0,255,0.15);
+}
+
+#skill tr,#skill tr>* {
+	position: relative;
+}
+
+#skill tr>.attr,
+#skill tr>.attr:after {
+	-webkit-transition: all 200ms;
+	   -moz-transition: all 200ms;
+		-ms-transition: all 200ms;
+		 -o-transition: all 200ms;
+			transition: all 200ms;
+}
+
+#skill tr:not(:first-child):hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+#skill tr:not(:first-child):hover>.attr:after {
+	opacity: 1;
+	top: 30px;
+}
+
+#skill tr:not(:first-child)>.attr {
+	bottom:0;
+}
+
+#skill tr:not(:first-child):hover>.attr {
+	bottom: 15px;
+}
+
+#skill .lbr {
+	width: 3px;
+	border: solid #A82 .5px;
+	border-right: none;
+	content: "";
+}
+
+#skill .rbr {
+	width: 3px;
+	border: solid #A82 .5px;
+	border-left: none;
+	content: "";
+}
+
+#skill tr>td:last-child:before {
+	position: absolute;
+	left: 5px;
+	height: 100%;
+	font-size: 25pt;
+	content: "";
+	background-color: rgba(0,0,255,0.25);
+	color:#320;
+}
+
+#skill tr:not(:first-child)>
+	td:last-child:before {
+	width: 0;
+	-webkit-transition: all 600ms;
+	   -moz-transition: all 600ms;
+		-ms-transition: all 600ms;
+		 -o-transition: all 600ms;
+			transition: all 600ms;
+}
+
+#skill tr>.attr:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 20pt;
+	content: "";
+	color:rgba(0,0,255,0.4);
+	opacity: 0;
+}
+
+#skill tr:nth-child(2)>.attr:after {
+	content: "80%";
+}
+
+#skill tr:nth-child(3)>.attr:after {
+	content: "60%";
+}
+
+#skill tr:nth-child(4)>.attr:after {
+	content: "60%";
 }
